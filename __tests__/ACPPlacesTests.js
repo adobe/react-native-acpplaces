@@ -12,6 +12,58 @@ governing permissions and limitations under the License.
 @format
 */
 
+import { NativeModules } from 'react-native';
+import ACPPlaces from '../js/ACPPlaces';
+import ACPPlacesAuthStatus from '../js/models/ACPPlacesAuthStatus';
+import ACPPlacesLocation from '../js/models/ACPPlacesLocation';
+import ACPPlacesGeofence from '../js/models/ACPPlacesGeofence';
+import ACPPlacesPOI from '../js/models/ACPPlacesPOI';
+import ACPPlacesGeofenceTransitionType from '../js/models/ACPPlacesGeofenceTransitionType';
+
 describe('ACPPlaces', () => {
+
+  test('extensionVersion is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'extensionVersion');
+    await ACPPlaces.extensionVersion();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('getNearbyPointsOfInterest is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'getNearbyPointsOfInterest');
+    let placesLocation = new ACPPlacesLocation(37.33, -121.89, null, null, null);
+    await ACPPlaces.getNearbyPointsOfInterest(placesLocation, 10);
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('processGeofence is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'processGeofence');
+    let geofence = new ACPPlacesGeofence("newId", 37.33, -121.89, 10, 10);
+    await ACPPlaces.processGeofence(geofence, ACPPlacesGeofenceTransitionType.ENTER);
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('getCurrentPointsOfInterest is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'getCurrentPointsOfInterest');
+    await ACPPlaces.getCurrentPointsOfInterest();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('getLastKnownLocation is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'getLastKnownLocation');
+    await ACPPlaces.getLastKnownLocation();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('clear is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'clear');
+    await ACPPlaces.clear();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('setAuthorizationStatus is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPPlaces, 'setAuthorizationStatus');
+    await ACPPlaces.setAuthorizationStatus();
+    expect(spy).toHaveBeenCalled();
+  });
 
 });

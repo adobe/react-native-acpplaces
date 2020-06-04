@@ -9,7 +9,7 @@
 
 "@adobe/react-native-acpplaces@git+ssh://git@github.com:ravjain-adb/react-native-acpplaces.git":
   version "0.0.1"
-  resolved "git+ssh://git@git.corp.adobe.com:ravjain/react-native-acpplaces.git#2b6db48a62855df578409bac664c435d28418b53"
+  resolved "git+ssh://git@github.com:ravjain-adb/react-native-acpplaces.git#22cf15d625c715180c1b35b925cc44aa9bfcdb32"
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
