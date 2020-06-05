@@ -26,7 +26,7 @@
   },
   "peerDependencies": {
     "@adobe/react-native-acpcore": ">=1.0.0",
-    "react-native": ">=0.62"
+    "react-native": ">=0.44.0"
   },
   "devDependencies": {
     "@babel/generator": "^7.4.4",

@@ -83,7 +83,7 @@ public class MainApplication extends Application implements ReactApplication {
       MobileCore.start(new AdobeCallback() {
         @Override
         public void call(Object o) {
-          MobileCore.configureWithAppID("launch-EN81be7cedb7f14132968641a6ec683adf");
+          MobileCore.configureWithAppID("<your-app-id>");
           HashMap<String, Object> cong = new HashMap<String, Object>();
           cong.put("places.membershipttl", 50);
           MobileCore.updateConfiguration(cong);

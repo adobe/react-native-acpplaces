@@ -5,15 +5,6 @@
  * @format
  */
 
-// const path = require('path');
-// // react-native >= 0.57
-// const extraNodeModules = {
-//   '@adobe/react-native-acpplaces': path.resolve(__dirname + '/../../'),
-// };
-// const watchFolders = [
-//   path.resolve(__dirname + '/../../')
-// ];
-
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({
@@ -23,8 +14,4 @@ module.exports = {
       },
     }),
   },
-  // resolver: {
-  //   extraNodeModules,
-  // },
-  // watchFolders
 };
