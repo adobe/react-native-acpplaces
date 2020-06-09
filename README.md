@@ -98,7 +98,8 @@ ACPPlaces.getNearbyPointsOfInterest(location, <limit>).then(pois => console.log(
 ##### Process geofence:
 
 ```javascript
-let geofence = new ACPPlacesGeofence("<Identifier>", <latitude>, <longitude>, <radius>, <expiration-duration>);
+// create a geofence
+let geofence = new ACPPlacesGeofence("geofence Identifier", <latitude>, <longitude>, <radius>, <optional expiration-duration>);
 ACPPlaces.processGeofence(geofence, ACPPlacesGeofenceTransitionType.ENTER);
 ACPPlaces.processGeofence(geofence, ACPPlacesGeofenceTransitionType.EXIT);
 ```
