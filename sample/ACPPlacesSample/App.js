@@ -40,13 +40,13 @@ export default class App extends Component<Props> {
   }
 
   getNearbyPointsOfInterest() {
-    let location = new ACPPlacesLocation(37.3325958, -121.8910217, null, null, null);
+    let location = new ACPPlacesLocation(EXAMPLE_LATITUDE, EXAMPLE_LONGITUDE, null, null, null);
     ACPPlaces.getNearbyPointsOfInterest(location, 2).then(pois => console.log("AdobeExperienceSDK: ACPPlaces pois: " + pois[0]["name"])).catch(error => console.log("AdobeExperienceSDK: ACPPlaces error: " + error));
   }
 
   processGeofence() {
     // Id from one of the geofence.
-    let geofence = new ACPPlacesGeofence("82e2eb52-e925-41a3-9d50-418a2e015608", 37.3325958, -121.8910217, 10, 10);
+    let geofence = new ACPPlacesGeofence(EXAMPLE_GEOFENCE_ID, EXAMPLE_LATITUDE, EXAMPLE_LONGITUDE, EXAMPLE_RADIUS, 10);
     ACPPlaces.processGeofence(geofence, ACPPlacesGeofenceTransitionType.EXIT);
   }
 
@@ -66,6 +66,11 @@ export default class App extends Component<Props> {
     ACPPlaces.setAuthorizationStatus(ACPPlacesAuthStatus.ALWAYS);
   }
 }
+
+const EXAMPLE_LATITUDE = 37.3325958;
+const EXAMPLE_LONGITUDE = -121.8910217;
+const EXAMPLE_GEOFENCE_ID = "82e2eb52-e925-41a3-9d50-418a2e015608";
+const EXAMPLE_RADIUS = 50;
 
 const styles = StyleSheet.create({
   container: {
