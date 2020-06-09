@@ -42,6 +42,5 @@ local.properties
 # BUCK
 buck-out/
 \.buckd/
-*.keystore
 acp-sdks/
 .*tgz
