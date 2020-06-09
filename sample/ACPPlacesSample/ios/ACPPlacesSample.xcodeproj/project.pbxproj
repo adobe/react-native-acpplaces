@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
