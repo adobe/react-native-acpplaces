@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		9282E8DF2490995300C77F5A /* libs */ = {
