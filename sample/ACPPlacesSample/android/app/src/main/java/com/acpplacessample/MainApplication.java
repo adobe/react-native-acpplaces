@@ -27,6 +27,9 @@ import com.adobe.marketing.mobile.Places;
 import com.adobe.marketing.mobile.WrapperType;
 import com.adobe.marketing.mobile.LoggingMode;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
