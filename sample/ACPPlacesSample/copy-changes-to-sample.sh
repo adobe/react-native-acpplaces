@@ -21,4 +21,4 @@ rm -r node_modules/@adobe/$EXTENSION_NAME
 mv node_modules/@adobe/package node_modules/@adobe/$EXTENSION_NAME
 
 echo 'Linking'
-react-native link
+#react-native link
