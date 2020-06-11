@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@adobe/react-native-acpcore": "^1.1.2",
-    "@adobe/react-native-acpplaces": "git+ssh://git@github.com:ravjain-adb/react-native-acpplaces.git",
+    "@adobe/react-native-acpplaces": "^0.0.1",
     "@babel/runtime": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
