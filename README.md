@@ -1,8 +1,10 @@
 
 # React Native AEP Places Extension
 
-[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpplaces.svg)](https://badge.fury.io/js/%40adobe%2Freact-native-acpplaces) ![npm](https://img.shields.io/npm/dm/@adobe/react-native-acpplaces) [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpplaces/master.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpplaces) ![NPM](https://img.shields.io/npm/l/@adobe/react-native-acpplaces.svg)
-
+[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpplaces.svg)](https://www.npmjs.com/package/@adobe/react-native-acpplaces) 
+[![npm downloads](https://img.shields.io/npm/dm/@adobe/react-native-acpplaces)](https://www.npmjs.com/package/@adobe/react-native-acpplaces)
+[![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpplaces/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpplaces) 
+[![license](https://img.shields.io/npm/l/@adobe/react-native-acpplaces.svg)](https://github.com/adobe/react-native-acpplaces/blob/main/LICENSE)
 
 `@adobe/react-native-acpplaces` is a wrapper around the iOS and Android [AEP Places SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-places) to allow for integration with React Native applications. Functionality to enable Adobe Places is provided entirely through JavaScript documented below.
 
