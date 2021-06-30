@@ -16,10 +16,11 @@ build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
 build-sample-android:
-	(cd sample/ACP*Sample/android && ./gradlew assembleRelease)
+	(cd sample/ACP*SampleApp/android && ./gradlew clean assembleRelease -x bundleReleaseJsAndAssets)
 
 build-sample-ios:
-	(cd sample/ACP*Sample/ios && xcodebuild build -project ACPPlacesSample.xcodeproj -scheme ACPPlacesSample CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGNING_ALLOWED="NO")
+	(cd sample/ACP*SampleApp/ios && pod update)
+	(cd sample/ACP*SampleApp && npx react-native run-ios)
 
 run-tests:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
@@ -32,8 +33,4 @@ copy-to-sample:
 
 # fetches the latest iOS & Android SDK and put them in the project
 update-libs:
-	rm -rf acp-sdks # clean if needed
-	git clone https://github.com/Adobe-Marketing-Cloud/acp-sdks
-	cp -a acp-sdks/iOS/${PROJECT_NAME}/ ios/libs/ # copy iOS lib
-	sh update-android-sdk.sh
-	rm -rf acp-sdks
+	(cd sample/ACP*SampleApp/ && make sync)

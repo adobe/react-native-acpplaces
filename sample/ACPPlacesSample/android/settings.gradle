@@ -1,9 +1,0 @@
-rootProject.name = 'ACPPlacesSample'
-include ':@adobe_react-native-acpplaces'
-project(':@adobe_react-native-acpplaces').projectDir = new File(rootProject.projectDir, '../node_modules/@adobe/react-native-acpplaces/android')
-include ':@adobe_react-native-acpcore'
-project(':@adobe_react-native-acpcore').projectDir = new File(rootProject.projectDir, '../node_modules/@adobe/react-native-acpcore/android')
-
-include ':app'
-// apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
-// include ':app'
