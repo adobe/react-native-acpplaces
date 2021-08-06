@@ -29,8 +29,4 @@ run-tests-locally: setup
 	./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
 
 copy-to-sample:
-	cd sample/ACP*SampleApp/ && sh copy-changes-to-sample.sh
-
-# fetches the latest iOS & Android SDK and put them in the project
-update-libs:
-	(cd sample/ACP*SampleApp/ && make sync)
+	(cd sample/ACP*SampleApp/ && make sync)	
