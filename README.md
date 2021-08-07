@@ -1,4 +1,3 @@
-
 # React Native AEP Places Extension
 
 [![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpplaces.svg)](https://www.npmjs.com/package/@adobe/react-native-acpplaces) 
@@ -33,18 +32,7 @@ npm install @adobe/react-native-acpplaces
 ```
 
 #### 2.1 Link
-- **React Native 0.60+**
-
-
-[CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app.
-
-
-- **React Native <= 0.59**
-
-
-```bash
-react-native link @adobe/react-native-acpplaces
-```
+This package requires React Native 0.60+ to build which supports [CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) to link the modules while building the app.
 
 *Note* For `iOS` using `cocoapods`, run:
 
@@ -75,7 +63,7 @@ ACPPlaces.extensionVersion().then(version => console.log("AdobeExperienceSDK: AC
 
 ##### Registering the extension with ACPCore:
 
-> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. For more information see how to initialize [Core](https://github.com/adobe/react-native-acpcore#initializing-the-sdk).
+> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively.
 
 ##### **iOS**
 ```objective-c

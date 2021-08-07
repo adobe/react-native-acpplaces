@@ -18,7 +18,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'CoreLocation'
-  s.library = 'sqlite3.0', 'c++', 'z'
-  s.vendored_frameworks = 'ios/libs/ACPPlaces.xcframework'
+  s.dependency "ACPPlaces"
 end
